@@ -1,23 +1,22 @@
-From 90cd66c9b8f87a1024f2309871169606fc1f8a6b Mon Sep 17 00:00:00 2001
-From: Matt Ellis <matell@microsoft.com>
-Date: Wed, 7 Jun 2017 11:35:28 -0700
-Subject: [PATCH] Prevent some packages from being restored
+From b06602f5769737b294d3661088b0ff2243e11ee2 Mon Sep 17 00:00:00 2001
+From: karajas <karajas@microsoft.com>
+Date: Wed, 6 Sep 2017 13:19:31 -0400
+Subject: [PATCH 1/1] Remove some external deps
 
 ---
  external/dir.proj | 2 --
  1 file changed, 2 deletions(-)
 
 diff --git a/external/dir.proj b/external/dir.proj
-index aefe376..05ceb43 100644
+index d3d7fd8..3c9d28f 100644
 --- a/external/dir.proj
 +++ b/external/dir.proj
-@@ -10,12 +10,10 @@
+@@ -10,11 +10,9 @@
      <Project Include="netstandard/netstandard.depproj" />
      <Project Include="netfx/netfx.depproj" />
      <Project Include="runtime/runtime.depproj" />
 -    <Project Include="test-runtime/XUnit.Runtime.depproj" />
-     <Project Include="harvestPackages/harvestPackages.netstandard1.6.depproj" />
-     <Project Include="harvestPackages/harvestPackages.uap10.0.depproj" />
+     <Project Include="harvestPackages/harvestPackages.depproj" />
      <Project Include="portable\portable.depproj" />
      <Project Include="ilasm/ilasm.depproj" />
 -    <Project Include="docs/docs.depproj" />
