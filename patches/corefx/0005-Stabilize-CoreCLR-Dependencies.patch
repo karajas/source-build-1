@@ -1,22 +1,22 @@
-From 72dabba67cbd6ce45cf50917a58903ea2d9c10da Mon Sep 17 00:00:00 2001
+From 2c1f290a4ccaad697737a21483020890eafe3115 Mon Sep 17 00:00:00 2001
 From: karajas <karajas@microsoft.com>
-Date: Wed, 6 Sep 2017 13:27:42 -0400
-Subject: [PATCH 1/1] fix coreclr version
+Date: Thu, 14 Sep 2017 14:59:51 -0400
+Subject: [PATCH 1/1] Update CoreCLR dependency
 
 ---
  dependencies.props | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/dependencies.props b/dependencies.props
-index 37a5cc4..50f1ea0 100644
+index c900c50..b2d3ade 100644
 --- a/dependencies.props
 +++ b/dependencies.props
 @@ -23,7 +23,7 @@
    <PropertyGroup>
      <PlatformPackageVersion>2.0.0</PlatformPackageVersion>
-     <CoreFxExpectedPrerelease>servicing-25629-01</CoreFxExpectedPrerelease>
--    <CoreClrPackageVersion>2.0.1-servicing-25630-02</CoreClrPackageVersion>
-+    <CoreClrPackageVersion>2.0.1-servicing-25519-03</CoreClrPackageVersion>
+     <CoreFxExpectedPrerelease>servicing-25708-01</CoreFxExpectedPrerelease>
+-    <CoreClrPackageVersion>2.0.2-servicing-25712-01</CoreClrPackageVersion>
++    <CoreClrPackageVersion>2.0.2-servicing-25519-03</CoreClrPackageVersion>
      <ExternalExpectedPrerelease>beta-25307-00</ExternalExpectedPrerelease>
      <ProjectNTfsExpectedPrerelease>beta-25317-00</ProjectNTfsExpectedPrerelease>
      <ProjectNTfsTestILCExpectedPrerelease>beta-25317-00</ProjectNTfsTestILCExpectedPrerelease>
