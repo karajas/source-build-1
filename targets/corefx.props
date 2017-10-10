@@ -4,6 +4,7 @@
     <ProjectDirectory Condition="'$(PathToRepo)' != ''">$(PathToRepo)</ProjectDirectory>
     <BuildCommand>$(ProjectDirectory)/build$(ShellExtension) -$(Configuration) -buildArch=$(Platform) -portable=false -- /p:ILLinkTrimAssembly=false</BuildCommand>
     <BuildCommand Condition="'$(Platform)' == 'arm'">$(ArmEnvironmentVariables) $(BuildCommand)</BuildCommand>
+    <BuildPackagesCommand>$(ProjectDirectory)/Tools/dotnetcli/dotnet msbuild pkg/Microsoft.NETCore.Platforms/Microsoft.NETCore.Platforms.builds /p:Configuration=$(Configuration)</BuildPackagesCommand>
     <PackagesOutput>$(ProjectDirectory)/bin/packages/$(Configuration)</PackagesOutput>
     <CleanCommand>$(ProjectDirectory)/clean$(ShellExtension)</CleanCommand>
     <LatestCommit>8321c729934c0f8be754953439b88e6e1c120c24</LatestCommit>

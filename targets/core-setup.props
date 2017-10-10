@@ -2,7 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectDirectory Condition="'$(PathToRepo)' != ''">$(PathToRepo)</ProjectDirectory>
-    <BuildArguments>-ConfigurationGroup=$(Configuration) -PortableBuild=false -strip-symbols -SkipTests=true </BuildArguments>
+    <BuildArguments>-ConfigurationGroup=$(Configuration) -PortableBuild=false -strip-symbols -SkipTests=true -DistroRid=$(TargetRid) </BuildArguments>
     <BuildArguments Condition="$(Platform.Contains('arm'))">$(BuildArguments) -TargetArchitecture=arm -DistroRid=linux-arm -DisableCrossgen=true -SkipTests=true -CrossBuild=true</BuildArguments>
     <BuildCommand>$(ProjectDirectory)/build$(ShellExtension) $(BuildArguments) -- /p:BuildDebPackage=false</BuildCommand>
     <BuildCommand Condition="$(Platform.Contains('arm'))">$(ArmEnvironmentVariables) $(BuildCommand)</BuildCommand>
@@ -23,9 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <RepositoryReference Include="coreclr" />
+<!--    <RepositoryReference Include="coreclr" />
     <RepositoryReference Include="corefx" />
     <RepositoryReference Include="newtonsoft-json" />
-    <RepositoryReference Include="standard" />
+    <RepositoryReference Include="standard" />-->
   </ItemGroup>
 </Project>

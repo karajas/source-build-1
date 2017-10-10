@@ -6,7 +6,7 @@
   <UsingTask AssemblyFile="$(TasksBinDir)Microsoft.DotNet.SourceBuild.Tasks.dll" TaskName="BuildDummyPackages" />
 
   <Target Name="Build" DependsOnTargets="PrepareOutput;BuildDummyPackages;BuildReferenceAssemblies">
-    <Message Text="Build Environment: $(Platform) $(Configuration) $(TargetOS) $(TargetRid)" />
+    <Message Importance="High" Text="Build Environment: $(Platform) $(Configuration) $(TargetOS) $(TargetRid)" />
 
     <ItemGroup>
       <_RootProject Include="$(ProjectDir)targets/repository.proj" Condition="'%(Repository.Identity)' == '$(DefaultRepository)'">
