@@ -1,0 +1,27 @@
+From 559dde7a1eec5cb4736cdf4ca705c9e7a534ebb2 Mon Sep 17 00:00:00 2001
+From: karajas <karajas@microsoft.com>
+Date: Mon, 18 Sep 2017 19:10:22 -0400
+Subject: [PATCH 1/1] sdaf
+
+---
+ .../projects/Microsoft.NETCore.App/src/Microsoft.NETCore.App.depproj   | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/pkg/projects/Microsoft.NETCore.App/src/Microsoft.NETCore.App.depproj b/src/pkg/projects/Microsoft.NETCore.App/src/Microsoft.NETCore.App.depproj
+index 9dcf30f..fa4843f 100644
+--- a/src/pkg/projects/Microsoft.NETCore.App/src/Microsoft.NETCore.App.depproj
++++ b/src/pkg/projects/Microsoft.NETCore.App/src/Microsoft.NETCore.App.depproj
+@@ -17,8 +17,9 @@
+     <RidSpecificAssets Condition="'$(NuGetRuntimeIdentifier)' != ''">true</RidSpecificAssets>
+     <IntermediateOutputPath>$(IntermediateOutputPath)$(NuGetRuntimeIdentifier)</IntermediateOutputPath>
+     <RestoreOutputPath>$(IntermediateOutputPath)</RestoreOutputPath>
+-    <AdditionalRestoreArgs>/p:HasRuntimePackages=false /p:IntermediateOutputPath=$(IntermediateOutputPath)</AdditionalRestoreArgs>
++    <AdditionalRestoreArgs>/p:HasRuntimePackages=false /p:IntermediateOutputPath=$(IntermediateOutputPath) /p:NugetRuntimeIdentifier=rhel.7.4-x64</AdditionalRestoreArgs>
+     <CrossGenSymbolsOutputPath>$(PackageSymbolsBinDir)/$(MSBuildProjectName)</CrossGenSymbolsOutputPath>
++    <NugetRuntimeIdentifier>rhel.7.4-x64</NugetRuntimeIdentifier>
+   </PropertyGroup>
+ 
+   <ItemGroup>
+-- 
+1.8.3.1
+
